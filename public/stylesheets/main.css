@@ -1,0 +1,38 @@
+body {
+	font-family: 'Lucida Grande', 'Lucida Sans Unicode', Garuda;
+	font-size: 14px;
+}
+.nav {
+	background: #F4F5F5;
+	border: solid #D5D0D2;
+	color: #111;
+	font-size: 0.85em;
+	line-height: 1.15;
+	padding: 10px 0 20px 5px;
+}
+a:visited {
+	color: blue;
+}
+ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+li {
+	position: relative;
+	padding-right: 2em;
+}
+li ul {
+	display: none;
+	position: absolute; 
+	top: 1.2em;
+	left: 0;
+}
+.warn {
+	background: #F4F5F5;
+	border: solid #981919;
+	color: #111;
+	font-size: 0.85em;
+	line-height: 1.15;
+	padding: 0.9em;
+}

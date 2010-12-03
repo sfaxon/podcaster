@@ -1,0 +1,16 @@
+<% if !available_podcasts.empty? %>
+<div class="about">list of podcasts:</div>
+<ul>
+<% available_podcasts.each do |podcast| %>
+	<li><%= link_to(podcast["title"], "#{podcast[:path]}", :itpc) %> by <%= podcast["author"] %></li>
+<% end %>
+</ul>
+<% else %>
+	add a folder to public/podcasts and put some .mp3's in it and a podcast.yml file<br />
+	example podcast.yml file: <br />
+	<p>
+		title: Fight Club Podcast
+		author: Tyler Durden
+		description: the first rule...
+	</p>
+<% end %>
