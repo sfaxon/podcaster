@@ -20,8 +20,7 @@ xml.rss("version" => "2.0",
         mp3 = ::Mp3Info.open("public/#{item}")
         xml.title   mp3.tag.title
         xml.link    "http://localhost:4567/#{item.gsub(" ", "%20")}"
-        pubdate = Time.now - (index * 10)
-        xml.pubDate pubdate.strftime("%a, %d %b %Y %H:%M:%S %z")
+        xml.pubDate File.mtime("public/#{item}").strftime("%a, %d %b %Y %H:%M:%S %z")
         xml.tag!("dc:creator", @podcast["author"])
         xml.guid    "http://localhost:4567/#{item.gsub(" ", "%20")}"
         xml.description mp3.tag.comments
